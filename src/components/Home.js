@@ -1,5 +1,5 @@
-import React, { Fragment, useEffect, useState} from 'react';
-import { Row, Col, Card, Button, Container, Div } from 'react-bootstrap';
+import React, { Fragment} from 'react';
+import { Card, Container } from 'react-bootstrap';
 
 
 const Home = () => {

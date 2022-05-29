@@ -1,18 +1,15 @@
 import React, { Fragment, useEffect, useState} from 'react';
 import { Row, Col, Card, Button, Container, ListGroup } from 'react-bootstrap';
 import axios from 'axios';
-import { Modal } from 'bootstrap';
 
 
 const People = () => {
 
 useEffect(() => {
     getPeople();
-    getPlanets();
 }, [])
 
     const [People, setPeople] = useState([])
-    const [Planets, setPlanets] = useState([])
     const [loading, setLoading] = useState([false])
 
     //make api call
@@ -30,18 +27,17 @@ useEffect(() => {
         }
     }
     //make an api call to get homeland
-    const getPlanets = async () => {
-            try{
-                let id = 1;
-                //fetch data from api
-                const res = await axios.get(`https://swapi.dev/api/planets/${id}/`)
-                //set People
-                setPlanets(res.data.results)
-                setLoading(true)
-            } catch (err) {
-                alert(err.message);
-            }
-    }
+    // const getPlanets = async () => {
+    //         try{
+    //             //fetch data from api
+    //             const res = await axios.get(`https://swapi.dev/api/planets/`)
+    //             //set People
+    //             setPlanets(res.data.results)
+    //             setLoading(true)
+    //         } catch (err) {
+    //             alert(err.message);
+    //         }
+    // }
 
     return <Fragment>
         <Container className="index_body mt-5">
@@ -56,7 +52,7 @@ useEffect(() => {
                         <ListGroup.Item>height: {results.height}</ListGroup.Item>
                         <ListGroup.Item>mass: {results.mass}</ListGroup.Item>
                         <ListGroup.Item>gender: {results.gender}</ListGroup.Item>
-                        <ListGroup.Item>homeworld: {results.homeworld.url}</ListGroup.Item>
+                        <ListGroup.Item>homeworld:{results.homeworld.url}</ListGroup.Item>
                     </ListGroup>                   
                     </Card.Text>
                     <Button variant="outline-dark">View HomeWorld</Button>
@@ -71,7 +67,4 @@ useEffect(() => {
     
 }
 
-// {loading && Planets.map((results) => (
-//     <p>{results.name}</p>
-// ))} 
 export default People

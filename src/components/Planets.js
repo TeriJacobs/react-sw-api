@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState} from 'react';
-import { Row, Col, Card, Button, Container } from 'react-bootstrap';
+import { Row, Col, Card, Container } from 'react-bootstrap';
 import axios from 'axios';
 
 const Planets = () => {
@@ -35,7 +35,6 @@ const Planets = () => {
                 <Card.Text>
                 {results.residents[`url`]}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
             </Card.Body>
             </Card>
         </Col>
