@@ -29,10 +29,6 @@ function App() {
           <Route path="planets" element={<Planets/>}>
           </Route>
         </Routes>
-        <Routes>
-          <Route path="contacts" element={<Contacts/>}>
-          </Route>
-        </Routes>
       </div>
       </div>
     </BrowserRouter>
