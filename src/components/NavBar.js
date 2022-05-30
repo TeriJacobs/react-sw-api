@@ -19,7 +19,6 @@ export default class NavBar extends Component {
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
                 <Nav.Link as={Link} to="/people">People</Nav.Link>
                 <Nav.Link as={Link} to="/planets">Planets</Nav.Link>
-                <Nav.Link as={Link} to="/contacts">Contacts</Nav.Link>
             </Nav>
             </Navbar.Collapse>
 
