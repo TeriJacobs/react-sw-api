@@ -46,5 +46,11 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^4.0.0",
+    "homepage": "http://{username}.github.io/{repo-name}",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
 }
