@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Home from './components/Home'
 import People from './components/People'
 import Planets from './components/Planets'
-import Contacts from './components/Contacts'
 import {
   BrowserRouter,
   Routes,
