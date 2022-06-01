@@ -1,47 +1,57 @@
-import React, { Fragment, useEffect, useState} from 'react';
-import { Row, Col, Card, Container } from 'react-bootstrap';
-import axios from 'axios';
+import React, {useEffect, useState} from 'react';
+import Cards from './Cards';
+import InputGroup from './Filters/Category/InputGroup';
 
 const Planets = () => {
 
+    let [id, setId] =useState(1);
+    let [info, setInfo] = useState([]);
+    let [results, setResults] = useState([]);// this must match whats in app.js for cards/props match
+    let {name, residents} = info;
+    console.log(info);
+    console.log(residents);
+    let api = `https://swapi.dev/api/planets/${id}`
+
     useEffect(() => {
-        getPlanets();
-    }, [])
+        (async function (){
+            let data = await fetch(api).then((res)=>res.json());
+            setInfo(data);
+
+            let a = await Promise.all(
+                data.residents.map((argX)=>{
+                    return fetch(argX).then(res=>res.json())
+                })
+            );
+            console.log(a)
+            setResults(a);
+        })()
+    } 
+    , [api]) //api to watch
+    return <div className ="container">
+        <div className="row my-3">
+            <h2 className="text-center">Residents of : {name} </h2>
+        </div>
+        <div className="row">
+            <div className="col-2">
+                <h6 className="text-center mb-4">
+                Select a planet to view residents
+                </h6>
+                <InputGroup setId={setId} name="Planet" total={60} />
+            </div>
+            <div className="col-9">
+                <div className="row">
+                    <Cards page='/planets/' results={results}/>
+                    {()=>{
+                        if(residents.length === []){
+                            return (<div>There are no residents living.</div>)
+                        }
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+
     
-        const [People, setPlanets] = useState([])
-        const [loading, setLoading] = useState([false])
-
-    //make an api call to get homeland
-    const getPlanets = async () => {
-        try{
-            //fetch data from api
-            const res = await axios.get('https://swapi.dev/api/planets')
-            //set People
-            setPlanets(res.data.results)
-            setLoading(true)
-        } catch (err) {
-            alert(err.message);
-        }
-    }
-
-    return <Fragment>
-    <Container className="index_body mt-5">
-    <Row className="justify-content-md-center">
-        {loading && People.map((results) => (
-        <Col sm={12} md={6} lg={3} key={results.name} className="mt-2 mb-2">
-            <Card style={{ width: '18rem' }}>
-            <Card.Body>
-                <Card.Title>{results.name}</Card.Title>
-                <Card.Text>
-                {results.residents[`url`]}
-                </Card.Text>
-            </Card.Body>
-            </Card>
-        </Col>
-        ))}
-    </Row>
-    </Container>
-</Fragment>
 }
 
 export default Planets
