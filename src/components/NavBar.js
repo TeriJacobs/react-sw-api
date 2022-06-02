@@ -14,9 +14,7 @@ export default class NavBar extends Component {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav>
-                    <Nav.Link as={Link} to="/people/:id">Characters</Nav.Link>
-                    <Nav.Link as={Link} to="/planets/">Planets</Nav.Link>
-                    <Nav.Link as={Link} to="/planets/:id">Char</Nav.Link>
+                    <Nav.Link as={Link} to="/planets/">View Associate Planets</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 </Container>

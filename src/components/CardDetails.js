@@ -5,8 +5,6 @@ const CardDetails = () => {
     let {id} = useParams();
     let [fetchedData, updateFetchedData]= useState([]);
     let {name, height, mass, birth_year, homeworld, films} = fetchedData;
-    console.log(fetchedData)
-
     let api = `https://swapi.dev/api/people/${id}`
     useEffect(() => {
         (async function(){

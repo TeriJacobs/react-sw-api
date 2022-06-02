@@ -16,22 +16,12 @@ useEffect(() => {
     getPeople();
     setLoading(false)
 }, [api])
-
-    //make api call
     const getPeople = async () => {
         try{
-            //fetch data from api
             const res = await axios.get(api)
-            //const pl = await axios.get('https://swapi.dev/api/planets/')
-            //set People
             setPeople(res.data.results)
-            // setPlanet(pl.data.results)
             setLoading(true)
-            // console.log(res.data.results)
             People.map((item)=>{console.log(item.name + `--- people`)})
-            //Planet.map((x) => {console.log(x.name + `---planet`)});
-           // Planet.map((y) => {console.log(y.residents)});
-            // console.log(pl.data.results)
         } catch (err) {
             alert(err.message);
         }

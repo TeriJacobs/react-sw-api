@@ -8,8 +8,6 @@ const Planets = () => {
     let [info, setInfo] = useState([]);
     let [results, setResults] = useState([]);// this must match whats in app.js for cards/props match
     let {name, residents} = info;
-    console.log(info);
-    console.log(residents);
     let api = `https://swapi.dev/api/planets/${id}`
 
     useEffect(() => {
@@ -22,7 +20,6 @@ const Planets = () => {
                     return fetch(argX).then(res=>res.json())
                 })
             );
-            console.log(a)
             setResults(a);
         })()
     } 
