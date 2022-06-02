@@ -24,7 +24,15 @@ const CardDetails = () => {
                     <div className="">
                     <span className="fw-bold">Mass: {mass}</span>
                     </div>
-                    
+                    <div className="">
+                    <span className="fw-bold">Birth Year: {birth_year}</span>
+                    </div>
+                    <div className="">
+                    <span className="fw-bold">Planet: {homeworld}</span>
+                    </div>
+                    <div className="">
+                    <span className="fw-bold">Films: {films}</span>
+                    </div>
                 </div>
             </div>
         </div>
