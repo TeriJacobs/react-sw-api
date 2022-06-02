@@ -30,7 +30,7 @@ useEffect(() => {
       <NavBar />
       <div>
         <Routes>
-          <Route path="/" element={<Home/>}></Route>
+          <Route path="react-sw-api/" element={<Home/>}></Route>
           <Route path="/planets" element={<Planets/>}></Route>
           <Route path="/planets/:id" element={<Planets/>}></Route>
         </Routes>
