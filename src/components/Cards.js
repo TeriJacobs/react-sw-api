@@ -11,18 +11,24 @@ const Cards = ({ results, page }) => {
                     <div className="">
                         <div className="content">
                             <div className="fs-4 fw-bold mb-3">{name}</div>
-                            <div className="row">
-                                <div className="col">
-                                    <div className="fs-7">height</div>
-                                    <div className="fs-6">{height} cm</div>
+                            <div className="moreDetails">
+                                <div className="row">
+                                    <div className="col">
+                                        <div className="fs-7 text-decoration-underline">height</div>
+                                        <div className="fs-6">{height} cm</div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="fs-7 text-decoration-underline">Mass</div>
+                                        <div className="fs-6">{mass} kg</div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="fs-7 text-decoration-underline">Gender</div>
+                                        <div className="fs-6">{gender}</div>
+                                    </div>
                                 </div>
-                                <div className="col">
-                                    <div className="fs-7">Mass</div>
-                                    <div className="fs-6">{mass} kg</div>
-                                </div>
-                                <div className="col">
-                                    <div className="fs-7">Gender</div>
-                                    <div className="fs-6">{gender}</div>
+                                <div className="row text-center mt-2">
+                                    <div className="fs-7 text-decoration-underline">Homeworld</div>
+                                    <div className="fs-6">{homeworld}</div>
                                 </div>
                             </div>
                         </div>

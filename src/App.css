@@ -35,6 +35,12 @@ li{
     margin:0.3rem;
     color: whitesmoke;
 }
+.moreDetails{
+  visibility: hidden;
+}
+.content:hover .moreDetails{
+  visibility: visible;
+}
 .glow-card:hover{
   box-shadow: 0 5px 5px rgba(145, 92, 182, .4);
   padding: 0;
