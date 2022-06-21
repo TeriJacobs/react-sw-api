@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-sw-api/static/css/main.9e4bf7ca.css",
-    "main.js": "/react-sw-api/static/js/main.1315c07c.js",
+    "main.css": "/react-sw-api/static/css/main.10e313df.css",
+    "main.js": "/react-sw-api/static/js/main.2c439cbd.js",
     "static/js/787.3efb75d4.chunk.js": "/react-sw-api/static/js/787.3efb75d4.chunk.js",
     "static/media/starwars-bg.png": "/react-sw-api/static/media/starwars-bg.47d7ce5922ccdd77e65b.png",
     "static/media/star-wars-logo.jpg": "/react-sw-api/static/media/star-wars-logo.81fac430adf17facc567.jpg",
     "index.html": "/react-sw-api/index.html",
-    "main.9e4bf7ca.css.map": "/react-sw-api/static/css/main.9e4bf7ca.css.map",
-    "main.1315c07c.js.map": "/react-sw-api/static/js/main.1315c07c.js.map",
+    "main.10e313df.css.map": "/react-sw-api/static/css/main.10e313df.css.map",
+    "main.2c439cbd.js.map": "/react-sw-api/static/js/main.2c439cbd.js.map",
     "787.3efb75d4.chunk.js.map": "/react-sw-api/static/js/787.3efb75d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e4bf7ca.css",
-    "static/js/main.1315c07c.js"
+    "static/css/main.10e313df.css",
+    "static/js/main.2c439cbd.js"
   ]
 }
