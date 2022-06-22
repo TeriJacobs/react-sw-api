@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-sw-api/static/css/main.10e313df.css",
-    "main.js": "/react-sw-api/static/js/main.f3af65b8.js",
+    "main.js": "/react-sw-api/static/js/main.e878b23a.js",
     "static/js/787.3efb75d4.chunk.js": "/react-sw-api/static/js/787.3efb75d4.chunk.js",
     "static/media/starwars-bg.png": "/react-sw-api/static/media/starwars-bg.47d7ce5922ccdd77e65b.png",
     "static/media/star-wars-logo.jpg": "/react-sw-api/static/media/star-wars-logo.81fac430adf17facc567.jpg",
     "index.html": "/react-sw-api/index.html",
     "main.10e313df.css.map": "/react-sw-api/static/css/main.10e313df.css.map",
-    "main.f3af65b8.js.map": "/react-sw-api/static/js/main.f3af65b8.js.map",
+    "main.e878b23a.js.map": "/react-sw-api/static/js/main.e878b23a.js.map",
     "787.3efb75d4.chunk.js.map": "/react-sw-api/static/js/787.3efb75d4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.10e313df.css",
-    "static/js/main.f3af65b8.js"
+    "static/js/main.e878b23a.js"
   ]
 }
